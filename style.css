@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Azeret Mono', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.score-board{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 1rem;
+    width: 70vmin;
+}
+
+.score{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.score-board h4{
+    /* font-size: 1rem; */
+    font-size: 2.5vmin;
+    font-weight: 400;
+}
+.score-board h2, .result h2{
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+.result{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 2vmin;
+ 
+}
+
+
+.result h2{
+  padding: 1rem;
+  border-radius: 1vmin;
+}
+
+.result .retryBtn{
+  border: none;
+  margin-top: 1rem;
+  border-radius: 1vmin;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 3vmin;
+  background-color: #ddd;
+  color: #333;
+  outline: none;
+
+}
+
+.game-board {
+  margin: 2rem auto;
+  width: 75vmin;
+  height: 75vmin;
+  display: grid;
+  grid-template-columns: repeat(4, 16vmin);
+  grid-template-rows: repeat(4, 16vmin);
+  background-color: rgba(0, 0, 0, 0.2);
+  gap: 2vmin;
+  border-radius: 2vmin;
+  padding: 1vmin;
+  place-content: center;
+  position: relative;
+}
+
+.cell {
+  background-color: #ddd;
+  border-radius: 1vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7.5vmin;
+  font-weight: bold;
+  animation: show 200ms ease-in-out
+}
+
+@keyframes show{
+  0%{
+    transform: scale(0);
+  }
+}
+
+
+.noFocus{
+  filter: blur(6px);
+}
