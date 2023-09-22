@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (zeros === 0) {
       gridDisplay.classList.add("noFocus");
       controlContainer.classList.add("noFocus");
-      document.querySelector(".result").style.display = "block";
+      document.querySelector(".result").style.display = "flex";
       resultDisplay.innerHTML = "You Lose!";
       document.querySelector(".result").style.backgroundColor = "#333";
       resultDisplay.style.color = "palevioletred";
