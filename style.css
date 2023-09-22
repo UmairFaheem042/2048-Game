@@ -14,7 +14,7 @@
   color: #fff;
   display: flex;
   flex-wrap: wrap;
-  
+
   gap: 10vmin;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,6 @@
   gap: 0.5rem;
 }
 
-
 .result {
   position: absolute;
   top: 50%;
@@ -51,7 +50,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .result h2 {
@@ -96,7 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 7.5vmin;
+  font-size: 5vmin;
   font-weight: bold;
   animation: show 200ms ease-in-out;
 }
@@ -111,8 +109,7 @@
   filter: blur(6px);
 }
 
-
-.controls{
+.controls {
   display: flex;
   flex-direction: column;
   gap: 3vmin;
@@ -144,12 +141,12 @@
   transition: 0.2s ease;
 }
 
-
-.bottom-keys div:hover, .top-key div:hover{
+.bottom-keys div:hover,
+.top-key div:hover {
   background-color: #222;
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .wrapper {
     gap: 5vmin;
   }

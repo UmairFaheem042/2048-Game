@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreDisplay = document.querySelector(".score h2");
   const resultDisplay = document.querySelector(".result h2");
   const retryBtn = document.querySelector(".retryBtn");
-  const controlContainer = document.querySelector('.controls');
-  const upBtn = document.querySelector('.up');
-  const downBtn = document.querySelector('.down');
-  const leftBtn = document.querySelector('.left');
-  const rightBtn = document.querySelector('.right');
+  const controlContainer = document.querySelector(".controls");
+  const upBtn = document.querySelector(".up");
+  const downBtn = document.querySelector(".down");
+  const leftBtn = document.querySelector(".left");
+  const rightBtn = document.querySelector(".right");
 
   gridDisplay.classList.remove("noFocus");
 
@@ -184,10 +184,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keyup", control);
 
-  upBtn.addEventListener('click', keyUp);
-  leftBtn.addEventListener('click', keyLeft);
-  downBtn.addEventListener('click', keyDown);
-  rightBtn.addEventListener('click', keyRight);
+  upBtn.addEventListener("click", keyUp);
+  leftBtn.addEventListener("click", keyLeft);
+  downBtn.addEventListener("click", keyDown);
+  rightBtn.addEventListener("click", keyRight);
 
   function keyRight() {
     moveRight();
