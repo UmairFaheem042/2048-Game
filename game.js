@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreDisplay = document.querySelector(".score h2");
   const resultDisplay = document.querySelector(".result h2");
   const retryBtn = document.querySelector(".retryBtn");
+  const controlContainer = document.querySelector('.controls');
+  const upBtn = document.querySelector('.up');
+  const downBtn = document.querySelector('.down');
+  const leftBtn = document.querySelector('.left');
+  const rightBtn = document.querySelector('.right');
 
   gridDisplay.classList.remove("noFocus");
 
@@ -179,6 +184,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keyup", control);
 
+  upBtn.addEventListener('click', keyUp);
+  leftBtn.addEventListener('click', keyLeft);
+  downBtn.addEventListener('click', keyDown);
+  rightBtn.addEventListener('click', keyRight);
+
   function keyRight() {
     moveRight();
     combineRow();
@@ -212,7 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < squares.length; i++) {
       if (squares[i].innerHTML == 2048) {
         gridDisplay.classList.add("noFocus");
-        document.querySelector(".result").style.display = "block";
+        controlContainer.classList.add("noFocus");
+        document.querySelector(".result").style.display = "flex";
         resultDisplay.innerHTML = "You Win!";
         document.querySelector(".result").style.backgroundColor = "#333";
         resultDisplay.style.color = "palegreen";
@@ -229,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (zeros === 0) {
       gridDisplay.classList.add("noFocus");
+      controlContainer.classList.add("noFocus");
       document.querySelector(".result").style.display = "block";
       resultDisplay.innerHTML = "You Lose!";
       document.querySelector(".result").style.backgroundColor = "#333";
